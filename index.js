@@ -27,9 +27,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(process.env.PORT, () => {
-    console.log(`Servidor corriendo en el servidor ${process.env.PORT}`)
-})
+app.listen(process.env.PORT || 4000, '0.0.0.0', () => {
+    console.log(`Servidor corriendo en el puerto ${process.env.PORT || 4000}`);
+});
 
 
 
